@@ -44,7 +44,9 @@ function objSerialization(obj, arr, _arr) {
     }
 }
 function translation(str ,newArr, index, len, obj,  _arr, lang) {
+    console.log(lang)
     translate(str, {from: enter.lang, to: lang}).then(res => {
+        console.log(2)
         newArr[index] = res.text
         _arr[1] = _arr[1] + 1
         if (len === _arr[1]) {
